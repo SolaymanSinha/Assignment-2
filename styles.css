@@ -9,9 +9,9 @@ body {
     box-sizing: border-box;
 }
 
-/* :root{
+:root{
     --section-gap: 50px;
-} */
+}
 
 /* -----------------------
 nav-bar styles 
@@ -49,18 +49,23 @@ Section-1 styles
     row-gap: 50px;
     margin-left: 8%;
     margin-right: 8%;
+    margin-top: var(--section-gap);
 }
 
 .sec-1-item-1 {
     max-width: 90%;
 }
 
-.item-1-btn {
+.item-1-btn, .see-more-btn {
     background-color: #E02C6E;
     padding: 5px 10px;
     border-radius: 7px;
     text-decoration: none;
     color: white;
+}
+
+.fas{
+    padding-left: 10px;
 }
 
 .sec-1-item-2 {
@@ -121,11 +126,81 @@ Section-2 styles
     color: orange;
 }
 
+.flex-container{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 150px;
+}
+
+.flex-container h5{
+    color: #E44780;
+}
+
+.section-2{
+    margin-top: var(--section-gap);
+}
+
+
+
+/* -----------------------
+Section-3 styles
+--------------------------*/
+.section-3{
+    margin-left: 8%;
+    margin-right: 8%;
+    max-width: 100%;
+    margin-top: var(--section-gap);
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.s3-img{
+    width: 504px;
+    height: 270px;
+}
+
+
+
+/* -----------------------
+Footer styles
+--------------------------*/
+footer{
+    background-color: #0A0826;
+    padding: 20px;
+    color: white;
+    margin-top: var(--section-gap);
+}
+
+footer .f-h1,
+.f-p,
+.icon{
+    text-align: center;
+}
+
+.icon i{
+    padding-left: 10px;
+}
+
+
+/* FOR TABLET */
+@media all and (max-width: 768px) {
+    .product-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-container{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
+
 
 
 /* FOR MOBILE */
-@media (max-width: 425px) {
-
+@media all and (max-width: 425px) {
     .pc-h3,
     .pc-h5,
     .pc-p,
@@ -134,7 +209,7 @@ Section-2 styles
     }
 
     .product-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .nav-bar ul {
@@ -167,12 +242,15 @@ Section-2 styles
         margin-left: 2%;
         margin-right: 2%;
     }
-}
 
+    .btn-container{
+        display: flex;
+        justify-content: center;
+    }
 
-/* FOR TABLET */
-@media (max-width: 768px) {
-    .product-container{
-        grid-template-columns: repeat(2, 1fr);
+    .s3-img{
+        width: 290px;
     }
 }
+
+
