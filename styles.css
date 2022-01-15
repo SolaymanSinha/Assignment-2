@@ -16,24 +16,24 @@ body {
 /* -----------------------
 nav-bar styles 
 --------------------------*/
-.nav-bar{
+.nav-bar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
-    margin: 0px 4%;
+    margin: 0px 8%;
 }
 
-.nav-bar ul{
+.nav-bar ul {
     display: flex;
 }
 
-.nav-bar ul li{
+.nav-bar ul li {
     list-style-type: none;
     padding-left: 20px;
 }
 
-.nav-bar ul li a{
+.nav-bar ul li a {
     text-decoration: none;
     color: black;
 }
@@ -42,18 +42,20 @@ nav-bar styles
 /* -----------------------
 Section-1 styles
 --------------------------*/
-.section-1{
+.section-1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     row-gap: 50px;
+    margin-left: 8%;
+    margin-right: 8%;
 }
 
-.sec-1-item-1{
+.sec-1-item-1 {
     max-width: 90%;
 }
 
-.item-1-btn{
+.item-1-btn {
     background-color: #E02C6E;
     padding: 5px 10px;
     border-radius: 7px;
@@ -61,58 +63,116 @@ Section-1 styles
     color: white;
 }
 
-.sec-1-item-2{
+.sec-1-item-2 {
     max-width: 90%;
 }
 
-.sec-1-item-2{
+.sec-1-item-2 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.item-2-img-1{
+.item-2-img-1 {
     display: grid;
     width: 200px;
 }
 
 
 
+/* -----------------------
+Section-2 styles
+--------------------------*/
+.s2-h2 {
+    text-align: center;
+}
 
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.pc-img {
+    width: 300px;
+    height: 256px;
+}
+
+.pc-h3,
+.pc-h5,
+.pc-p,
+.pc-star {
+    font-weight: 500;
+}
+
+.pc-h5{
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+.pc-h3{
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.fa-star{
+    color: orange;
+}
 
 
 
 /* FOR MOBILE */
 @media (max-width: 425px) {
-    .nav-bar ul{
+
+    .pc-h3,
+    .pc-h5,
+    .pc-p,
+    .pc-star {
+        text-align: center;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-bar ul {
         display: none;
     }
 
-    .nav-bar{
+    .nav-bar {
         display: block;
         text-align: center;
     }
 
-    .section-1{
+    .section-1 {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .sec-1-item-2{
+    .sec-1-item-2 {
         grid-row: 1;
     }
-    
-    .sec-1-item-1{
+
+    .sec-1-item-1 {
         margin-top: -50px;
     }
 
-    .div-btn{
+    .div-btn {
         display: flex;
         justify-content: center;
+    }
+
+    .section-1 {
+        margin-left: 2%;
+        margin-right: 2%;
     }
 }
 
 
 /* FOR TABLET */
 @media (max-width: 768px) {
-    
+    .product-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
